@@ -1,2 +1,2 @@
-# certificates
-My collection of certificates.
+# Curriculum-Vitae
+My CV and certificates collection.
