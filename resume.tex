@@ -90,12 +90,12 @@
       {"Alma Mater Studiorum" - University of Bologna}{Cesena (FC), Italy}
       {Bachelor of Science in Computer Science and Engineering}{Sept. 2021 -- Ongoing}
       \resumeItemListStart
-          \resumeItem{Relevant Coursework}{Object-Oriented Programming (Java), High Performance Computing (OpenMP, Open MPI, CUDA), 
-          Embedded Systems and Internet of Things (Arduino UNO, esp32), Systems Integration and Virtualization (Docker), Software Engineering}
+          \resumeItem{Relevant Coursework}{Object-Oriented Programming (Java), High Performance Computing (OpenMP, Open MPI, CUDA, SIMD), 
+          Embedded Systems and Internet of Things (Arduino, ESP32 (rtOS), Raspberry Pi), Systems Integration and Virtualization (Docker), Software Engineering}
       \resumeItemListEnd
     \resumeSubheading
       {I.T.T. "G. Giorgi"}{Brindisi (BR), Italy}
-      {High School Diploma in ICT and Telecommunications}{Sept. 2016 -- Jun. 2020}
+      {High School Diploma in ICT and Telecommunications}{Sept. 2015 -- Jun. 2021}
   \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------------
@@ -165,31 +165,35 @@
 \section{Skills}
  \resumeSubHeadingListStart
    \item{
-     \textbf{Programming Languages}{: Java, Python, Bash, C, C++ (Wiring framework), Php, JavaScript, MATLAB}
+     \textbf{Programming Languages}{: C, C++ (Wiring framework), Java, Python, Php, JavaScript, MATLAB}
      \hfill
      }
      \item{
-     \textbf{Other Languages}{: HTML5, CSS (Bootstrap4, W3CSS), XML, Markdown, LaTeX}
+     \textbf{Other Languages}{: Bash, HTML5, CSS (Bootstrap4, W3CSS), XML, Markdown, LaTeX}
      \hfill
      }
      \item{
-     \textbf{Tools}{: Git, XAMPP, Hypervisors (Libvirt, Qemu, Virtualbox), Docker, JavaFX Scene Builder, Microsoft Office, Libre Office, Outlook, Mozilla Thunderbird}
+     \textbf{Software Tools}{: Git, XAMPP, Hypervisors (Qemu, Virtualbox), Docker, JavaFX Scene Builder, Microsoft Office, Libre Office, Outlook, Mozilla Thunderbird}
      \hfill
      }
      \item{
-     \textbf{Operating Systems}{: Linux (proficient with Arch-based and Debian-based distributions), Windows}
+     \textbf{Operating Systems}{: Linux (Arch-based and Debian-based distributions), Windows}
      }
  \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
+    \resumeSubItem{\href{https://github.com/aleemont1/esiot-23-24-assignment2/}{River Monitoring System}}
+      {Development of a River Monitoring System prototype using ESP32 and Arduino UNO.
+       I engineered and developed the River Monitoring Subsystem, implementing data acquisition and
+       transmission to the MQTT server, exploiting FreeRTOS task scheduling, along with robust connection and error handling.}
     \resumeSubItem{\href{https://github.com/aleemont1/esiot-23-24-assignment2/}{Smart Car Washing}}
-      {Group project involving the development of a Smart Car Washing prototype using Arduino UNO. 
+      {Development of a Smart Car Washing prototype using Arduino UNO. 
       I led the backend development, engineering the FSM, implementing the scheduler, and designing all the task APIs. 
       Other key contributions include establishing the task dependency system and implementing critical tasks.}
     \resumeSubItem{\href{https://github.com/progetto-oop-22-23/OOP22-HOMER}{HOMER}}
-      {Collaborative project involving the development of a smart home emulator in Java. 
+      {Development of a smart home emulator in Java. 
         While my primary programming role was secondary, I took a lead in the analysis and software engineering phases. 
         I engineered the architecture and implemented features such as the electricity monitoring system, 
         along with the design of smart and automatic outlets.}
@@ -208,7 +212,6 @@
             \resumeSubHeadingListEnd
         }
     }
-\begin{comment}    
     \item{
         \textbf{English}
         {
@@ -217,7 +220,6 @@
             \resumeSubHeadingListEnd
         }
     }
-\end{comment}
 \resumeSubHeadingListEnd
 %-------------------------------------------
 \end{document}
