@@ -1,0 +1,6 @@
+*
+!*.pdf
+resume.pdf
+!*.tex
+!.github/workflows/*
+!.gitignore
