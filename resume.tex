@@ -8,6 +8,8 @@
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
+\usepackage{fontawesome5}
+\usepackage{graphicx}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
@@ -29,7 +31,7 @@
 \addtolength{\oddsidemargin}{-0.375in}
 \addtolength{\evensidemargin}{-0.375in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
+\addtolength{\topmargin}{-.50in}
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
@@ -75,24 +77,22 @@
 \begin{document}
 \setlength{\footskip}{5pt}
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Alessandro Monticelli} & Email : \href{mailto:alessandro.monticelli@live.it}{alessandro.monticelli@live.it}\\
-  & Mobile : +39 340 053 1380 \\
-  & \href{https://www.linkedin.com/in/ale-mont/}{LinkedIn: Alessandro Monticelli} \\
-  & \href{https://www.github.com/aleemont1}{GitHub: aleemont1}
-\end{tabular*}
+  \centering\textbf{\Large Alessandro Monticelli} \\
+  \vspace{0.25in}
+  \centering{\small{\faPhone} +39-340-053-1380 \quad
+        \href{mailto:alessandro.monticelli@live.com}{\faEnvelope\underline{alessandro.monticelli@live.com}} \quad
+        \href{https://www.linkedin.com/in/ale-mont}{{\faLinkedin} \underline{Alessandro Monticelli}} \quad
+        \href{https://github.com/aleemont1}{{\faGithub} \underline{aleemont1}}}
 
-
-%-----------EDUCATION-----------------
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {"Alma Mater Studiorum" - University of Bologna}{Cesena (FC), Italy}
-      {Bachelor of Science in Computer Science and Engineering}{Sept. 2021 -- Ongoing}
+      {Bachelor of Science in Computer Science and Engineering}{Sept. 2021 -- July 2025}
       \resumeItemListStart
-          \resumeItem{Relevant Coursework}{Object-Oriented Programming (Java, C\#), High Performance Computing (OpenMP, Open MPI, CUDA, SIMD), 
-          Embedded Systems and Internet of Things (Arduino, ESP32 (rtOS), Raspberry Pi), Systems Integration and Virtualization (Docker, Vagrant, Kubernetes, Active Directory), Telecommunication Networks}
+          \resumeItem{Relevant Coursework}{Object-Oriented Programming, High Performance Computing, 
+          Embedded Systems and Internet of Things, Systems Integration and Virtualization, Telecommunication Networks}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -104,13 +104,12 @@
         \resumeItem{Technologies used} {C, C++, LoRa}
         \resumeItem{Description}
         {Student organization of the University of Bologna.
-	        I took the technical lead for the embedded system engineering process for the avionics.
-	        The aim is to participate in EuRoC'25, the European Rocketry Challenge.}
+	        I took the technical lead for the embedded system engineering process for the avionics.}
     \resumeItemListEnd
     \resumeSubheading{SPOT. Digital Made Simple}{Cesena(FC), Italy}{Embedded Software Engineer Intern}{February 2024 -- May 2024}
     \resumeItemListStart
         \resumeItem{Technologies used} {Python, .NET 8.0, NuGet}
-        \resumeItem{Completed tasks}
+        \resumeItem{Description}
         {Refactoring of an IoT platform to manage smart cinema seats.
           Reversed-engineered the driver of the RF module, extracting low-level commands for the control units.
           Engineered a full-fledged simulator of the system to create scenarios and integrations.}
@@ -118,8 +117,9 @@
     \resumeSubheading{UBM - Unibo Motorsport Team}{Bologna(BO), Italy}{IT department - Software developer}{October 2023 -- April 2024}
     \resumeItemListStart
         \resumeItem{Technologies used} {Python, Vue.js, MySQL}
-        \resumeItem{Completed tasks}
-        {Implemented connection pooling for the database, enhancing connections stability and performance. Enhanced the QR code scanning for product placement in warehouses.}
+        \resumeItem{Description}
+        {Implemented connection pooling for the database, enhancing connections stability and performance. 
+          Enhanced the QR code scanning algorithm for product placement in warehouses.}
     \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -176,8 +176,8 @@
   \resumeSubHeadingListStart
     \item{
       \textbf{Programming}{: Good knowledge of Java, C\# (.NET 8.0), C++, Python and C. 
-                              Good understanding of the OOP paradigm and principles, design patterns, and software architecture.
-                              Knowledge of High Performance Computing technologies (OpenMP, Open MPI, CUDA, SIMD) and Embedded Systems and IoT technologies.}
+        Good understanding of the OOP principles, design patterns, and software architecture.
+        Knowledge of High Performance Computing technologies (OpenMP, Open MPI, CUDA, SIMD).}
       \hfill
       }
     \item{
@@ -191,8 +191,7 @@
       }
     \item{
       \textbf{Network \& Systems Management}{: Active Directory deployment and management, domain joining, DNS and DHCP setup, GPO management. 
-                                                Docker containerization, multi-container applications, volumes and container networks management, Kubernetes basics.
-                                                NextCloud deployment and management, file sharing, user management, and permissions.}
+        Docker containerization, multi-container applications, Kubernetes basics. NextCloud deployment and management.}
       \hfill
       }
     \item{
@@ -205,12 +204,11 @@
 \section{Projects}
   \resumeSubHeadingListStart
   \resumeSubItem{\href{https://github.com/aleemont1/OKINsimulator}{OKIN Simulator}}
-      {Full-fledged simulator of a smart cinema hall, based on a real IoT implementation.
-       I engineered and developed the simulator from scratch, using different programming patterns and a modular-by-design approach.}
+      {Full-fledged simulator of a smart cinema hall, based on a real IoT implementation.}
     \resumeSubItem{\href{https://github.com/aleemont1/esiot-23-24-assignment3/}{River Monitoring System}}
       {Development of a River Monitoring System prototype using ESP32 and Arduino UNO.
        I engineered and developed the River Monitoring Subsystem, implementing data acquisition and
-       transmission to the MQTT server, using FreeRTOS task scheduling, along with robust connection and error handling.}
+       transmission to the MQTT server, using FreeRTOS task scheduling.}
     \resumeSubItem{\href{https://github.com/aleemont1/esiot-23-24-assignment2/}{Smart Car Washing}}
       {Development of a Smart Car Washing prototype using Arduino UNO. 
       I led the backend development, engineering the FSM, implementing the scheduler, and designing all the task APIs. 
