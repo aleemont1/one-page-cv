@@ -41,31 +41,14 @@ jobs:
         with:
           scheme: full
           run: |
-            latexmk -xelatex -interaction=nonstopmode resume.tex 
-            # Compile in html
-            make4ht resume.tex
-      - name: Prepare deployment artifact
-        run: |
-          mkdir site
-          # Copy files to the site folder
-          cp resume.html site/index.html
-          cp resume.css site/resume.css
-          # Add CSS to make images responsive
-          echo "img {max-width: 100%; height: auto;}" >> site/resume.css
-
-      - name: Generate build artifact
-        uses: actions/upload-artifact@main
-        with:
-          name: build-html
-          path: site
-
+            latexmk -xelatex -interaction=nonstopmode resume.tex
   deploy:
-    name: Deploy PDF and HTML
+    name: Deploy PDF to GitHub Pages
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: [build-pdf, build-html]
+    needs: build-pdf
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout
@@ -75,11 +58,6 @@ jobs:
         with:
           name: build-pdf
           path: site/pdf
-      - name: Download artifacts
-        uses: actions/download-artifact@main
-        with:
-          name: build-html
-          path: site/
       - name: Setup Pages
         uses: actions/configure-pages@main
       - name: Upload artifacts
