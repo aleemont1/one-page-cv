@@ -20,17 +20,20 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@main
+
       - name: Compile resume
         uses: xu-cheng/latex-action@v3
         with:
           root_file: resume.tex
           work_in_root_file_dir: true
           args: -xelatex -file-line-error -halt-on-error -interaction=nonstopmode
+
       - name: Generate build artifact
         uses: actions/upload-artifact@main
         with:
           name: build-pdf
           path: resume.pdf
+
   deploy:
     name: Deploy PDF to GitHub Pages
     environment:
@@ -42,17 +45,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@main
+
       - name: Download PDF artifact
         uses: actions/download-artifact@main
         with:
           name: build-pdf
-          path: site/pdf
+          path: site/
+
       - name: Setup Pages
         uses: actions/configure-pages@main
+
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@main
         with:
-          path: site
+          path: site/
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@main
