@@ -25,23 +25,12 @@ jobs:
         with:
           root_file: resume.tex
           work_in_root_file_dir: true
+          args: -xelatex -file-line-error -halt-on-error -interaction=nonstopmode
       - name: Generate build artifact
         uses: actions/upload-artifact@main
         with:
           name: build-pdf
           path: resume.pdf
-  build-html:
-    runs-on: ubuntu-latest
-    name: Build HTML
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Compile resume
-        uses: xu-cheng/texlive-action@v2
-        with:
-          scheme: full
-          run: |
-            latexmk -xelatex -interaction=nonstopmode resume.tex
   deploy:
     name: Deploy PDF to GitHub Pages
     environment:
