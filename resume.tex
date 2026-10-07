@@ -5,7 +5,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[a4paper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage{fontawesome}
@@ -16,7 +16,9 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\usepackage[hidelinks,
+    pdftitle={Alessandro Monticelli - CV},
+    pdfauthor={Alessandro Monticelli}]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{comment}
 \usepackage{fontspec}
@@ -63,8 +65,12 @@
   }
 }
 
+% ATS-friendly layout: \item[] avoids a stray bullet on its own line in the
+% extracted text. Convention for the arguments:
+%   #1 = role / institution (bold, left)   #2 = dates (right)
+%   #3 = company + location / degree (italic, left)   #4 = optional (italic, right)
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
+  \vspace{-1pt}\item[]
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{#3} & \textit{ #4} \\
@@ -89,33 +95,33 @@
   \centering\textbf{\Large Alessandro Monticelli} \\
   \centering{\small{\faIcon{phone}} +39-340-053-1380 \quad
         \href{mailto:alessandro.monticelli@live.it}{{\faIcon{envelope}} \underline{alessandro.monticelli@live.it}} \quad
-        \href{https://www.linkedin.com/in/ale-mont}{{\faIcon{linkedin}} 
-        \underline{Alessandro Monticelli}} \quad
+        \href{https://www.linkedin.com/in/ale-mont}{{\faIcon{linkedin}}
+        \underline{linkedin.com/in/ale-mont}} \quad
         \href{https://github.com/aleemont1}
-        {{\faIcon{github}} 
-        \underline{aleemont1}}}
+        {{\faIcon{github}}
+        \underline{github.com/aleemont1}}}
 
 %-----------EXPERIENCE-----------------
 \section{\textbf{Experience}}
 \resumeSubHeadingListStart
-    \resumeSubheading{Freelance Software Engineer}{Remote}{Self-employed}{June 2026 -- Current}
+    \resumeSubheading{Freelance Software Engineer}{Jun 2026 -- Present}{Self-employed, Remote}{}
     \resumeItemListStart
         \resumeItem{Technologies} {Python, SQLite, Docker, Multiprocessing}
         \resumeItem{Description}
-        {Engineered GDOScraper, a modular ETL pipeline extracting supermarket promotional data for the italian startup company Foodify. 
+        {Engineered GDOScraper, a modular ETL pipeline extracting supermarket promotional data for the Italian startup company Foodify.
         Implemented REST API scraping and visual parsing of PDF flyers via spatial segmentation.}
     \resumeItemListEnd
-    \resumeSubheading{Undergraduate Researcher}{Cesena, Italy}{University of Bologna}{July 2025 -- Current}
+    \resumeSubheading{Undergraduate Researcher}{Jul 2025 -- Present}{University of Bologna, Cesena, Italy}{}
     \resumeItemListStart
-        \resumeItem{Technologies} {C++, LoRa\textsuperscript{\textcopyright}}
+        \resumeItem{Technologies} {C++, LoRa}
         \resumeItem{Description}
-        {Designed and field-tested a segmented-packet protocol over LoRa\textsuperscript{\textcopyright} for reliable telemetry. Authoring a related research paper supervised by Prof. Andrea Piroddi.}
+        {Designed and field-tested a segmented-packet protocol over LoRa for reliable telemetry. Authoring a related research paper supervised by Prof. Andrea Piroddi.}
     \resumeItemListEnd
-    \resumeSubheading{Project Manager}{Forlì, Italy}{Aurora Rocketry Team - Unibo}{April 2024 -- Current}
+    \resumeSubheading{Project Manager}{Apr 2024 -- Present}{Aurora Rocketry Team - Unibo, Forlì, Italy}{}
     \resumeItemListStart
-        \resumeItem{Technologies} {C++, LoRa\textsuperscript{\textcopyright}, Python}
+        \resumeItem{Technologies} {C++, LoRa, Python}
         \resumeItem{Description}
-        {Leading development of an ESP32-based flight computer for a sounding rocket, managing a team of 7. 
+        {Leading development of an ESP32-based flight computer for a sounding rocket, managing a team of 7.
         Integrated telemetry system, ground station, and apogee detection via Extended Kalman Filter.}
     \resumeItemListEnd
 
@@ -123,21 +129,21 @@
 
 \section{\textbf{Education}}
 \resumeSubHeadingListStart
-    \resumeSubheading{"Alma Mater Studiorum" - University of Bologna}{Cesena, Italy}
-    {M.Sc. in Computer Science and Engineering}{Sept 2025 -- Current}
+    \resumeSubheading{Alma Mater Studiorum - University of Bologna, Cesena, Italy}{Sep 2025 -- Present}
+    {M.Sc. in Computer Science and Engineering}{}
     % \resumeItemListStart
     %     \resumeItem{Thesis}{}
     %     \resumeItem{Relevant Coursework}{}
     % \resumeItemListEnd
-    \resumeSubheading{"Haskolinn i Reykjavik" - University of Reykjavik}{Reykjavik, Iceland}
-    {Erasmus+ Exchange for M.Sc in Computer Science}{Jan 2026 -- June 2026}
+    \resumeSubheading{Reykjavik University (Háskólinn í Reykjavík), Reykjavik, Iceland}{Jan 2026 -- Jun 2026}
+    {Erasmus+ Exchange for M.Sc. in Computer Science}{}
     \resumeItemListStart
         \resumeItem{Relevant Coursework}{Distributed and Concurrent Programming (Go), Cybersecurity Management and Compliance in Practice (ISO27001, ISO42001), Deep Learning, Big Data Management}
     \resumeItemListEnd
-    \resumeSubheading{"Alma Mater Studiorum" - University of Bologna}{Cesena, Italy}
-    {B.Sc. in Computer Science and Engineering}{Sept 2021 -- July 2025}
+    \resumeSubheading{Alma Mater Studiorum - University of Bologna, Cesena, Italy}{Sep 2021 -- Jul 2025}
+    {B.Sc. in Computer Science and Engineering}{}
     % \resumeItemListStart
-        % \resumeItem{Thesis}{\textit{Development and Optimization of a Telemetry System for Rockets - Architecture and Data Transmission using LoRa\textsuperscript{\textcopyright}}}
+        % \resumeItem{Thesis}{\textit{Development and Optimization of a Telemetry System for Rockets - Architecture and Data Transmission using LoRa}}
         % \resumeItem{Relevant Coursework}{OOP, High Performance Computing, Embedded Systems, Virtualization, Telecommunication Networks}
     % \resumeItemListEnd
 \resumeSubHeadingListEnd
@@ -145,19 +151,19 @@
 \section{\textbf{Skills}}
 \resumeSubHeadingListStart
     \resumeSubItem{Programming}{C++, C, Python, Java, C\# (.NET 8.0). OOP, design patterns, HPC (OpenMP, OpenMPI, CUDA, SIMD).}
-    \resumeSubItem{Embedded Systems \& IoT}{Arduino, ESP32 (FreeRTOS), LoRa\textsuperscript{\textcopyright}, MQTT, RTOS task scheduling, sensor fusion.}
+    \resumeSubItem{Embedded Systems \& IoT}{Arduino, ESP32 (FreeRTOS), LoRa, MQTT, RTOS task scheduling, sensor fusion.}
     \resumeSubItem{Operating Systems}{Linux (desktop/server), Windows Server (AD, GPOs). Service and user management.}
     \resumeSubItem{Networking \& Systems}{Active Directory, Docker, Kubernetes, CI/CD with GitHub Actions.}
 \resumeSubHeadingListEnd
 \section{\textbf{Projects \& Publications}}
 \resumeSubHeadingListStart
     \resumeSubItem{\href{https://github.com/aleemont1/supermarket-scraper}{GDOScraper}}
-    {Python ETL pipeline extracting supermarket promotional data via REST APIs and PDF visual parsing.}
+    {Python ETL pipeline extracting supermarket promotional data via REST APIs and PDF visual parsing. (\href{https://github.com/aleemont1/supermarket-scraper}{github.com/aleemont1/supermarket-scraper})}
     \resumeSubItem{\href{https://github.com/aurorarocketryteam/nemesis}{Nemesis}}
-    {Advanced flight computer software for high-power rocketry, featuring real-time telemetry, sensor fusion, and autonomous flight state management.}
+    {Advanced flight computer software for high-power rocketry, featuring real-time telemetry, sensor fusion, and autonomous flight state management. (\href{https://github.com/aurorarocketryteam/nemesis}{github.com/aurorarocketryteam/nemesis})}
     \resumeSubItem{\href{https://aleemont1.github.io/bachelor-thesis/pdf/tesi.pdf}{Bachelor Thesis}}
-    {Development and Optimization of a Telemetry System for Rockets - Architecture and Data Transmission using LoRa\textsuperscript{\textcopyright}}
+    {Development and Optimization of a Telemetry System for Rockets - Architecture and Data Transmission using LoRa. (\href{https://aleemont1.github.io/bachelor-thesis/pdf/tesi.pdf}{aleemont1.github.io/bachelor-thesis})}
     \resumeSubItem{Research Paper (in preparation)}
-    {Co-authoring a paper on a LoRa\textsuperscript{\textcopyright} segmented data transmission protocol, expected submission to IEEE, 2026.}
+    {Co-authoring a paper on a LoRa segmented data transmission protocol, expected submission to IEEE, 2026.}
 \resumeSubHeadingListEnd
 \end{document}
