@@ -22,14 +22,12 @@
 \usepackage{fontspec}
 \usepackage{setspace}
 \usepackage{xcolor}
-\usepackage{enumitem}
 
 \DeclareRobustCommand{\faIcon}[1]{\faicon{#1}}
 
-
 \definecolor{navy}{rgb}{0.0, 0.0, 0.6}
 \definecolor{blue}{rgb}{0.0, 0.0, 0.8}
-\setstretch{1.2}
+\setstretch{1.0}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -42,7 +40,7 @@
 \addtolength{\evensidemargin}{-.6in}
 \addtolength{\textwidth}{1.25in}
 \addtolength{\topmargin}{-.6in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textheight}{1.2in}
 
 \urlstyle{same}
 
@@ -52,112 +50,104 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-10pt}\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{3pt}]
+\titlespacing*{\section}{0pt}{4pt}{4pt}
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
-  \item{
-    \color{black}\textbf{#1}\color{black}{: #2 \vspace{-4pt}}
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+  \vspace{1pt}\item[]
+    \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
       \textbf{#1} & #2 \\
-      \textit{#3} & \textit{ #4} \\
-    \end{tabular*}\vspace{-8pt}
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-4pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-5pt}}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-3pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=12pt,label={$\bullet$}]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
 %-------------------------------------------
 %%%%%%%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%
-
 
 \begin{document}
 \setlength{\footskip}{5pt}
 %----------HEADING-----------------
-  \centering\textbf{\Large Alessandro Monticelli} \\
-  \centering{\small{\faIcon{phone}} +39-340-053-1380 \quad
-        \href{mailto:alessandro.monticelli@live.it}{{\faIcon{envelope}} \underline{alessandro.monticelli@live.it}} \quad
-        \href{https://www.linkedin.com/in/ale-mont}{{\faIcon{linkedin}} 
-        \underline{Alessandro Monticelli}} \quad
-        \href{https://github.com/aleemont1}
-        {{\faIcon{github}} 
-        \underline{aleemont1}}}
+\begin{center}
+  \textbf{\Large Alessandro Monticelli} \\ \vspace{3pt}
+  {\small{\faIcon{phone}} +39-340-053-1380 \quad
+    \href{mailto:alessandro.monticelli@live.it}{{\faIcon{envelope}} \underline{alessandro.monticelli@live.it}} \quad
+    \href{https://www.linkedin.com/in/ale-mont}{{\faIcon{linkedin}} \underline{Alessandro Monticelli}} \quad
+    \href{https://github.com/aleemont1}{{\faIcon{github}} \underline{aleemont1}}}
+\end{center}
+\vspace{-6pt}
 
 %-----------EXPERIENCE-----------------
-\section{\textbf{Experience}}
+\section{Experience}
 \resumeSubHeadingListStart
+    \resumeSubheading{Software Developer}{Faenza, Italy}{S.EL.E.D. Soc. Coop.}{September 2026 -- Current}
+    \resumeItemListStart
+        \item\small{Architected a two-stage hybrid RAG platform (FastAPI, PostgreSQL \texttt{pgvector} \& \texttt{tsvector}, Cross-Encoder) and a logit intent router, enforcing an air-gapped security model with zero direct LLM database access.}
+        \item\small{Reduced document ingestion API costs by 15x in Power Automate ETL pipelines via Claude Haiku 5.5, prompt caching, and tool-calling structured outputs (eliminating oversized JSON-schema prompts).}
+        \item\small{Automated contract termination notice tracking, eliminating renewal deadline penalty risks for Caviro; refactored PowerApp for SdI foreign invoice XML generation (Agrintesa) with bulk VAT updates.}
+    \resumeItemListEnd
+
     \resumeSubheading{Freelance Software Engineer}{Remote}{Self-employed}{June 2026 -- Current}
     \resumeItemListStart
-        \resumeItem{Technologies} {Python, SQLite, Docker, Multiprocessing}
-        \resumeItem{Description}
-        {Engineered GDOScraper, a modular ETL pipeline extracting supermarket promotional data for the italian startup company Foodify. 
-        Implemented REST API scraping and visual parsing of PDF flyers via spatial segmentation.}
+        \item\small{Engineered \href{https://github.com/aleemont1/supermarket-scraper}{GDOScraper}, a modular ETL pipeline extracting and normalizing supermarket promotional data for the Italian startup Foodify via dynamic REST API scraping, spatial PDF flyer parsing, and multiprocessing.}
     \resumeItemListEnd
-    \resumeSubheading{Undergraduate Researcher}{Cesena, Italy}{University of Bologna}{July 2025 -- Current}
+
+    \resumeSubheading{Undergraduate Researcher}{Cesena, Italy}{University of Bologna (Supervised by Prof. Andrea Piroddi)}{July 2025 -- Current}
     \resumeItemListStart
-        \resumeItem{Technologies} {C++, LoRa\textsuperscript{\textcopyright}}
-        \resumeItem{Description}
-        {Designed and field-tested a segmented-packet protocol over LoRa\textsuperscript{\textcopyright} for reliable telemetry. Authoring a related research paper supervised by Prof. Andrea Piroddi.}
+        \item\small{Architected \href{https://github.com/aleemont1/lora-paper}{LAMP (LoRaMultiPacket)}, a C++17 reliable transport protocol with selective-repeat bitmap SACK-ARQ; validated via 117k ns-3 simulations with 100\% delivery up to 19.1~km. Authoring IEEE paper.}
     \resumeItemListEnd
+
     \resumeSubheading{Project Manager}{Forlì, Italy}{Aurora Rocketry Team - Unibo}{April 2024 -- Current}
     \resumeItemListStart
-        \resumeItem{Technologies} {C++, LoRa\textsuperscript{\textcopyright}, Python}
-        \resumeItem{Description}
-        {Leading development of an ESP32-based flight computer for a sounding rocket, managing a team of 7. 
-        Integrated telemetry system, ground station, and apogee detection via Extended Kalman Filter.}
+        \item\small{Directed team of 7 developing the ESP32 flight computer for \href{https://github.com/aurorarocketryteam/nemesis}{Nemesis} (sounding rocket), integrating real-time LoRa\textsuperscript{\textcopyright} telemetry, sensor fusion, and EKF apogee detection (basis of bachelor thesis).}
     \resumeItemListEnd
-
 \resumeSubHeadingListEnd
 
-\section{\textbf{Education}}
+%-----------EDUCATION-----------------
+\section{Education}
 \resumeSubHeadingListStart
-    \resumeSubheading{"Alma Mater Studiorum" - University of Bologna}{Cesena, Italy}
+    \resumeSubheading{``Alma Mater Studiorum'' - University of Bologna}{Cesena, Italy}
     {M.Sc. in Computer Science and Engineering}{Sept 2025 -- Current}
-    % \resumeItemListStart
-    %     \resumeItem{Thesis}{}
-    %     \resumeItem{Relevant Coursework}{}
-    % \resumeItemListEnd
-    \resumeSubheading{"Haskolinn i Reykjavik" - University of Reykjavik}{Reykjavik, Iceland}
-    {Erasmus+ Exchange for M.Sc in Computer Science}{Jan 2026 -- June 2026}
+    \resumeSubheading{Reykjavik University (H\'ask\'olinn \'i Reykjav\'ik)}{Reykjavik, Iceland}
+    {Erasmus+ Exchange for M.Sc. in Computer Science}{Jan 2026 -- May 2026}
     \resumeItemListStart
-        \resumeItem{Relevant Coursework}{Distributed and Concurrent Programming (Go), Cybersecurity Management and Compliance in Practice (ISO27001, ISO42001), Deep Learning, Big Data Management}
+        \resumeItem{Relevant Coursework}{Distributed and Concurrent Programming (Go), Cybersecurity Management and Compliance (ISO27001, ISO42001), Deep Learning, Big Data Management}
     \resumeItemListEnd
-    \resumeSubheading{"Alma Mater Studiorum" - University of Bologna}{Cesena, Italy}
+    \resumeSubheading{``Alma Mater Studiorum'' - University of Bologna}{Cesena, Italy}
     {B.Sc. in Computer Science and Engineering}{Sept 2021 -- July 2025}
-    % \resumeItemListStart
-        % \resumeItem{Thesis}{\textit{Development and Optimization of a Telemetry System for Rockets - Architecture and Data Transmission using LoRa\textsuperscript{\textcopyright}}}
-        % \resumeItem{Relevant Coursework}{OOP, High Performance Computing, Embedded Systems, Virtualization, Telecommunication Networks}
-    % \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-\section{\textbf{Skills}}
+%-----------SKILLS-----------------
+\section{Skills}
 \resumeSubHeadingListStart
-    \resumeSubItem{Programming}{C++, C, Python, Java, C\# (.NET 8.0). OOP, design patterns, HPC (OpenMP, OpenMPI, CUDA, SIMD).}
-    \resumeSubItem{Embedded Systems \& IoT}{Arduino, ESP32 (FreeRTOS), LoRa\textsuperscript{\textcopyright}, MQTT, RTOS task scheduling, sensor fusion.}
-    \resumeSubItem{Operating Systems}{Linux (desktop/server), Windows Server (AD, GPOs). Service and user management.}
-    \resumeSubItem{Networking \& Systems}{Active Directory, Docker, Kubernetes, CI/CD with GitHub Actions.}
+    \resumeSubItem{Programming}{C++, C, Python, Java, C\# (.NET 8.0), Go (basic), SQL.}
+    \resumeSubItem{AI \& Data Engineering}{RAG Architectures, PostgreSQL (\texttt{pgvector}, \texttt{tsvector}), scikit-learn, LLM APIs (Prompt Caching), FastAPI.}
+    \resumeSubItem{Embedded \& IoT}{ESP32 (FreeRTOS), Arduino, LoRa\textsuperscript{\textcopyright}, MQTT, Sensor Fusion, RTOS scheduling.}
+    \resumeSubItem{Systems \& Cloud}{Docker, Kubernetes (basic), CI/CD (GitHub Actions), Power Platform, Linux (Desktop \& Server), Windows Server.}
 \resumeSubHeadingListEnd
-\section{\textbf{Projects \& Publications}}
+
+%-----------PUBLICATIONS & PROJECTS-----------------
+\section{Projects \& Publications}
 \resumeSubHeadingListStart
-    \resumeSubItem{\href{https://github.com/aleemont1/supermarket-scraper}{GDOScraper}}
-    {Python ETL pipeline extracting supermarket promotional data via REST APIs and PDF visual parsing.}
-    \resumeSubItem{\href{https://github.com/aurorarocketryteam/nemesis}{Nemesis}}
-    {Advanced flight computer software for high-power rocketry, featuring real-time telemetry, sensor fusion, and autonomous flight state management.}
-    \resumeSubItem{\href{https://aleemont1.github.io/bachelor-thesis/pdf/tesi.pdf}{Bachelor Thesis}}
-    {Development and Optimization of a Telemetry System for Rockets - Architecture and Data Transmission using LoRa\textsuperscript{\textcopyright}}
-    \resumeSubItem{Research Paper (in preparation)}
-    {Co-authoring a paper on a LoRa\textsuperscript{\textcopyright} segmented data transmission protocol, expected submission to IEEE, 2026.}
+    \resumeSubItem{\href{https://github.com/aleemont1/lora-paper}{LoRa Research Paper (IEEE Peer Review)}}{Monticelli A., Piroddi A., \textit{“Development of a Segmented, Reliable Communication Protocol for Data Transmission over Long-Range (LoRa) Links”}, 2026.}
+    \resumeSubItem{\href{https://aleemont1.github.io/bachelor-thesis/pdf/tesi.pdf}{Bachelor Thesis}}{\textit{“Development and Optimization of a Telemetry System for Rockets – Architecture and Data Transmission using LoRa\textsuperscript{\textcopyright}”}, University of Bologna, 2025.}
+    \resumeSubItem{\href{https://github.com/aleemont1/supermarket-scraper}{GDOScraper} \& \href{https://github.com/aurorarocketryteam/nemesis}{Nemesis}}{Open-source ETL supermarket data scraper; high-power sounding rocket flight computer software.}
 \resumeSubHeadingListEnd
+
 \end{document}
