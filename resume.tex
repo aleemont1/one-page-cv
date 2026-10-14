@@ -110,12 +110,12 @@
 
     \resumeSubheading{Undergraduate Researcher}{Cesena, Italy}{University of Bologna (Supervised by Prof. Andrea Piroddi)}{July 2025 -- Current}
     \resumeItemListStart
-        \item\small{Architected \href{https://github.com/aleemont1/lora-paper}{LAMP (LoRaMultiPacket)}, a C++17 reliable transport protocol with selective-repeat bitmap SACK-ARQ; validated via 117k ns-3 simulations with 100\% delivery up to 19.1~km. Authoring IEEE paper.}
+        \item\small{Architected \href{https://github.com/aleemont1/LAMP}{LAMP (LoRaMultiPacket)}, a C++17 reliable transport protocol with single-bitmap SACK-ARQ (up to 62.2~kB); evaluated across 295,800 ns-3 runs (extending 90\% PDR range by 22--35\% in urban channels) and physical ESP32-S3/SX1262 hardware bench. Authoring IEEE paper.}
     \resumeItemListEnd
 
     \resumeSubheading{Project Manager}{Forlì, Italy}{Aurora Rocketry Team - Unibo}{April 2024 -- Current}
     \resumeItemListStart
-        \item\small{Directed team of 7 developing the ESP32 flight computer for \href{https://github.com/aurorarocketryteam/nemesis}{Nemesis} (sounding rocket), integrating real-time LoRa\textsuperscript{\textcopyright} telemetry, sensor fusion, and EKF apogee detection (basis of bachelor thesis).}
+        \item\small{Directed team of 7 developing the ESP32 flight computer for \href{https://github.com/AuroraRocketryTeam/atlas}{Atlas / Nemesis} (sounding rocket), integrating real-time LoRa\textsuperscript{\textcopyright} telemetry, sensor fusion, and EKF apogee detection (basis of bachelor thesis).}
     \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -131,6 +131,9 @@
     \resumeItemListEnd
     \resumeSubheading{``Alma Mater Studiorum'' - University of Bologna}{Cesena, Italy}
     {B.Sc. in Computer Science and Engineering}{Sept 2021 -- July 2025}
+    \resumeItemListStart
+        \resumeItem{Relevant Coursework}{Embedded Systems and IoT, Programmazione di Reti (Network Programming), Reti di Telecomunicazione (Telecommunication Networks), High Performance Computing, OOP}
+    \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 %-----------SKILLS-----------------
@@ -145,9 +148,9 @@
 %-----------PUBLICATIONS & PROJECTS-----------------
 \section{Projects \& Publications}
 \resumeSubHeadingListStart
-    \resumeSubItem{\href{https://github.com/aleemont1/lora-paper}{LoRa Research Paper (IEEE Peer Review)}}{Monticelli A., Piroddi A., \textit{“Development of a Segmented, Reliable Communication Protocol for Data Transmission over Long-Range (LoRa) Links”}, 2026.}
-    \resumeSubItem{\href{https://aleemont1.github.io/bachelor-thesis/pdf/tesi.pdf}{Bachelor Thesis}}{\textit{“Development and Optimization of a Telemetry System for Rockets – Architecture and Data Transmission using LoRa\textsuperscript{\textcopyright}”}, University of Bologna, 2025.}
-    \resumeSubItem{\href{https://github.com/aleemont1/supermarket-scraper}{GDOScraper} \& \href{https://github.com/aurorarocketryteam/nemesis}{Nemesis}}{Open-source ETL supermarket data scraper; high-power sounding rocket flight computer software.}
+    \resumeSubItem{\href{https://github.com/aleemont1/lora-paper}{LoRa Research Paper (IEEE Peer Review)}}{Monticelli A., Piroddi A., \textit{“LAMP: A Selective-ACK Transport Protocol for Reliable Bulk Data Transmission over LoRa Networks”}, 2026.}
+    \resumeSubItem{\href{https://aleemont1.github.io/bachelor-thesis/pdf/tesi.pdf}{Bachelor Thesis}}{\textit{“Development and Optimization of a Telemetry System for Rockets -- Architecture and Data Transmission using LoRa\textsuperscript{\textcopyright}”}, University of Bologna, 2025.}
+    \resumeSubItem{\href{https://github.com/AuroraRocketryTeam/atlas}{Atlas / Nemesis} \& \href{https://github.com/aleemont1/federated-lightweight-chat}{FLC}}{ESP32 flight computer for sounding rockets (FreeRTOS, LoRa, EKF); distributed peer-to-peer chat with vector clocks \& gossip anti-entropy.}
 \resumeSubHeadingListEnd
 
 \end{document}
