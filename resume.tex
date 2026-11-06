@@ -1,85 +1,10 @@
 %-------------------------
-% Resume in Latex
-% Author : Sourabh Bajaj
-% Website: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
-
-\documentclass[letterpaper,11pt]{article}
-
-\usepackage{latexsym}
-\usepackage{fontawesome}
-\usepackage{graphicx}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage{comment}
-\usepackage{fontspec}
-\usepackage{setspace}
-\usepackage{xcolor}
-
-\DeclareRobustCommand{\faIcon}[1]{\faicon{#1}}
-
-\definecolor{navy}{rgb}{0.0, 0.0, 0.6}
-\definecolor{blue}{rgb}{0.0, 0.0, 0.8}
-\setstretch{1.0}
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-.6in}
-\addtolength{\evensidemargin}{-.6in}
-\addtolength{\textwidth}{1.25in}
-\addtolength{\topmargin}{-.6in}
-\addtolength{\textheight}{1.2in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{3pt}]
-\titlespacing*{\section}{0pt}{4pt}{4pt}
-
+% One-page CV -- English. Layout and shared macros live in preamble.tex.
+% Keep resume-it.tex in sync with every content change made here.
 %-------------------------
-% Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{1pt}\item[]
-    \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
-      \textbf{#1} & #2 \\
-      \textit{#3} & \textit{#4} \\
-    \end{tabular*}\vspace{-4pt}
-}
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
-
-\renewcommand{\labelitemii}{$\circ$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-3pt}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=12pt,label={$\bullet$}]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
-%-------------------------------------------
-%%%%%%%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%
+\documentclass[a4paper,11pt,english]{article}
+\input{preamble}
+\hypersetup{pdftitle={Alessandro Monticelli -- Curriculum Vitae}, pdflang={en-US}}
 
 \begin{document}
 \setlength{\footskip}{5pt}
@@ -154,4 +79,5 @@
     {Advanced ESP32 flight computer software for high-power rocketry, featuring real-time LoRa\textsuperscript{\textcopyright} telemetry, sensor fusion, and EKF apogee detection.}
 \resumeSubHeadingListEnd
 
+\cvsignatureblock
 \end{document}

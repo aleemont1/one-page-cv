@@ -1,0 +1,83 @@
+%-------------------------
+% One-page CV -- Italian. Layout and shared macros live in preamble.tex.
+% Keep resume.tex in sync with every content change made here.
+%-------------------------
+\documentclass[a4paper,11pt,italian]{article}
+\input{preamble}
+\hypersetup{pdftitle={Alessandro Monticelli -- Curriculum Vitae (IT)}, pdflang={it-IT}}
+
+\begin{document}
+\setlength{\footskip}{5pt}
+%----------HEADING-----------------
+\begin{center}
+  \textbf{\Large Alessandro Monticelli} \\ \vspace{3pt}
+  {\small{\faIcon{phone}} +39-340-053-1380 \quad
+    \href{mailto:alessandro.monticelli@live.it}{{\faIcon{envelope}} \underline{alessandro.monticelli@live.it}} \quad
+    \href{https://www.linkedin.com/in/ale-mont}{{\faIcon{linkedin}} \underline{Alessandro Monticelli}} \quad
+    \href{https://github.com/aleemont1}{{\faIcon{github}} \underline{aleemont1}}}
+\end{center}
+\vspace{-6pt}
+
+%-----------EXPERIENCE-----------------
+\section{Esperienze professionali}
+\resumeSubHeadingListStart
+    \resumeSubheading{Sviluppatore Software}{Faenza, Italia}{S.EL.E.D. Soc. Coop.}{Settembre 2026 -- In corso}
+    \resumeItemListStart
+        \item\small{Progettato una piattaforma RAG ibrida a due stadi (FastAPI, PostgreSQL \texttt{pgvector} \& \texttt{tsvector}, Cross-Encoder) e un intent router basato su logit, con modello di sicurezza air-gapped senza accesso diretto dell'LLM al database.}
+        \item\small{Ridotto di 15 volte i costi API di acquisizione documenti nelle pipeline ETL di Power Automate con Claude Haiku 5.5, prompt caching e output strutturati via tool calling (al posto di lunghi prompt con schemi JSON).}
+        \item\small{Automatizzato il monitoraggio delle disdette contrattuali, eliminando il rischio di penali da rinnovi mancati per Caviro; rifattorizzato la PowerApp per gli XML delle fatture estere verso lo SdI (Agrintesa) con aggiornamenti IVA massivi.}
+    \resumeItemListEnd
+
+    \resumeSubheading{Software Engineer freelance}{Da remoto}{Libero professionista}{Giugno 2026 -- In corso}
+    \resumeItemListStart
+        \item\small{Sviluppato \href{https://github.com/aleemont1/supermarket-scraper}{GDOScraper}, pipeline ETL modulare che estrae e normalizza le promozioni della GDO per la startup italiana Foodify, tramite scraping dinamico di REST API, parsing spaziale di volantini PDF e multiprocessing.}
+    \resumeItemListEnd
+
+    \resumeSubheading{Studente ricercatore}{Cesena, Italia}{Università di Bologna (supervisione del prof. Andrea Piroddi)}{Luglio 2025 -- In corso}
+    \resumeItemListStart
+        \item\small{Progettato \href{https://github.com/aleemont1/LAMP}{LAMP (LoRaMultiPacket)}, protocollo di trasporto affidabile in C++17 con SACK-ARQ a singola bitmap (fino a 62,2~kB); valutato su 295.800 simulazioni ns-3 (+22--35\% di portata al 90\% di PDR in ambito urbano) e su banco hardware ESP32-S3/SX1262. Articolo IEEE in stesura.}
+    \resumeItemListEnd
+
+    \resumeSubheading{Project Manager}{Forlì, Italia}{Aurora Rocketry Team - Unibo}{Aprile 2024 -- In corso}
+    \resumeItemListStart
+        \item\small{Coordino un team di 7 sviluppatori sul flight computer ESP32 di \href{https://github.com/AuroraRocketryTeam/atlas}{Atlas / Nemesis} (razzo sonda), con telemetria LoRa\textsuperscript{\textcopyright} in tempo reale, sensor fusion e rilevamento dell'apogeo via EKF (base della tesi triennale).}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Istruzione}
+\resumeSubHeadingListStart
+    \resumeSubheading{``Alma Mater Studiorum'' - Università di Bologna}{Cesena, Italia}
+    {Laurea Magistrale in Ingegneria e Scienze Informatiche}{Set 2025 -- In corso}
+    \resumeSubheading{Reykjavik University (H\'ask\'olinn \'i Reykjav\'ik)}{Reykjavík, Islanda}
+    {Erasmus+ per la Laurea Magistrale in Computer Science}{Gen 2026 -- Mag 2026}
+    \resumeItemListStart
+        \resumeItem{Insegnamenti rilevanti}{Distributed and Concurrent Programming (Go), Cybersecurity Management and Compliance (ISO27001, ISO42001), Deep Learning, Big Data Management}
+    \resumeItemListEnd
+    \resumeSubheading{``Alma Mater Studiorum'' - Università di Bologna}{Cesena, Italia}
+    {Laurea Triennale in Ingegneria e Scienze Informatiche}{Set 2021 -- Lug 2025}
+    \resumeItemListStart
+        \resumeItem{Insegnamenti rilevanti}{Sistemi Embedded e IoT, Programmazione di Reti, Reti di Telecomunicazione, High Performance Computing, Programmazione ad Oggetti}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{Competenze}
+\resumeSubHeadingListStart
+    \resumeSubItem{Programmazione}{C++, C, Python, Java, C\# (.NET 8.0), Go (base), SQL.}
+    \resumeSubItem{AI \& Data Engineering}{Architetture RAG, PostgreSQL (\texttt{pgvector}, \texttt{tsvector}), scikit-learn, API di LLM (Prompt Caching), FastAPI.}
+    \resumeSubItem{Embedded \& IoT}{ESP32 (FreeRTOS), Arduino, LoRa\textsuperscript{\textcopyright}, MQTT, Sensor Fusion, scheduling RTOS.}
+    \resumeSubItem{Systems \& Cloud}{Docker, Kubernetes (base), CI/CD (GitHub Actions), Power Platform, Linux (Desktop \& Server), Windows Server.}
+\resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS & PROJECTS-----------------
+\section{Progetti \& Pubblicazioni}
+\resumeSubHeadingListStart
+    \resumeSubItem{\href{https://github.com/aleemont1/lora-paper}{Articolo di ricerca su LoRa (in preparazione)}}{Monticelli A., Piroddi A., \textit{“LAMP: A Selective-ACK Transport Protocol for Reliable Bulk Data Transmission over LoRa Networks”}, in preparazione per la sottomissione a IEEE, 2026.}
+    \resumeSubItem{\href{https://aleemont1.github.io/bachelor-thesis/pdf/tesi.pdf}{Tesi di Laurea Triennale}}{\textit{“Sviluppo e ottimizzazione di un sistema di telemetria per razzi -- Architettura e trasmissione dati tramite LoRa\textsuperscript{\textcopyright}”}, Università di Bologna, 2025.}
+    \resumeSubItem{\href{https://github.com/AuroraRocketryTeam/atlas}{Nemesis (Flight Computer)}}
+    {Software di volo ESP32 per razzi ad alta potenza, con telemetria LoRa\textsuperscript{\textcopyright} in tempo reale, sensor fusion e rilevamento dell'apogeo via EKF.}
+\resumeSubHeadingListEnd
+
+\cvsignatureblock
+\end{document}
