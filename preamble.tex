@@ -1,0 +1,106 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% Website: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+%
+% Shared preamble for every variant of the one-page CV.
+%
+%   resume.tex            English
+%   resume-it.tex         Italian
+%   resume-signed.tex     English + GDPR clause and signature
+%   resume-it-signed.tex  Italian + GDPR clause and signature
+%
+% The document language comes from the \documentclass option
+% (english / italian) and is picked up by babel. A signed variant
+% defines \cvsigned before loading the CV. Every variant must fit
+% on ONE page.
+%------------------------
+
+
+\usepackage{babel}
+\usepackage{latexsym}
+\usepackage{fontawesome}
+\usepackage{graphicx}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{comment}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{xcolor}
+
+\DeclareRobustCommand{\faIcon}[1]{\faicon{#1}}
+
+\definecolor{navy}{rgb}{0.0, 0.0, 0.6}
+\definecolor{blue}{rgb}{0.0, 0.0, 0.8}
+\setstretch{1.0}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-.6in}
+\addtolength{\evensidemargin}{-.6in}
+\addtolength{\textwidth}{1.25in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{3pt}]
+\titlespacing*{\section}{0pt}{4pt}{4pt}
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{1pt}\item[]
+    \begin{tabular*}{\linewidth}{@{}l@{\extracolsep{\fill}}r@{}}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-3pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=12pt,label={$\bullet$}]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+%-------------------------------------------
+%%%%%%%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%
+
+\hypersetup{
+  pdfauthor={Alessandro Monticelli},
+  pdfsubject={Curriculum Vitae},
+  pdfkeywords={Alessandro Monticelli, CV, Software Engineer, Embedded Systems, LoRa, RAG},
+}
+
+% The page is full: keep the signature block compact.
+\def\cvsignatureskip{2pt}
+\def\cvsignatureheight{0.8cm}
+\input{signature}
